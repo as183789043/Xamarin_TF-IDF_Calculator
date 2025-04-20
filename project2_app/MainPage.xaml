@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="project2_app.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Maroon" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Label Text="Welcome to CSE598 Project 2!" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="White" 
+                       FontSize="36"/>
+            </StackLayout>
+        </Frame>
+        <Label FontSize="24" Text="Enter URL You Want to Fetch"/>
+        <Entry x:Name="Encrypturl"/>
+        <Button x:Name="Web2StringButton" Text="Download" Clicked="Web2StringButton_Clicked"/>
+        <Frame x:Name="DownloadResultFrame" HasShadow="True" BorderColor="Gray" IsVisible="False" Padding="10">
+            <Label x:Name="DownloadResultLabel" TextColor="Black"/>
+        </Frame>
+        
+        <Button x:Name="FilterButton" Text="Filter Content" Clicked="FilterButton_Clicked"/>
+        <Frame x:Name="FilterResultFrame" HasShadow="True" BorderColor="Gray" IsVisible="False" Padding="10">
+            <Label x:Name="FilterResultLabel" TextColor="Black"/>
+        </Frame>
+        
+        <Button x:Name="TOP10Button" Text="TOP 10" Clicked="TOP10Button_Clicked"/>
+        <Frame x:Name="TOP10ResultFrame" HasShadow="True" BorderColor="Gray" IsVisible="False" Padding="10">
+            <Label x:Name="TOP10ResultLabel" TextColor="Black"/>
+        </Frame>
+
+        <Button x:Name="Fetch3URLButton" Text="FStarting from a URL, download the web and find 2 more URLs by calling Web2String, downloaded docs, call WordFilter and Top10, and generate 2 more documents" Clicked="Fetch3Button_Clicked" IsVisible="True"/>
+
+        <Button x:Name="TFIDFButton" Text="Calculate the TF-IDF of top 10 words in the three documents" Clicked="TFIDFButton_Clicked"/>
+        <Frame x:Name="TFIDFResultFrame" HasShadow="True" BorderColor="Gray" IsVisible="False" Padding="10">
+            <Label x:Name="TFIDFResultLabel" TextColor="Black"/>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
